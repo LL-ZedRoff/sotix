@@ -397,7 +397,7 @@ if (command == "kick") { // creates the command kick
         .addField("Commande kick : ", "S!kick [user] {reason} : Pour kick un utilisateur, disponible uniquement pour le Staff du serveur !")
         .addField("Commande newstory et tellstory :", "S!newstory et S!tellstory sont actuellement en dév !")
         .addField("Commande Sondage :", "S!Sondage {Nom du sondage}")
-        .addField("
+        .addField("Commande Ping Server :", "S!pingserver : Temps de latence avec le serveur (Faux ping)")
         .addField("Commande Ban : ", "S!ban [user] {reason} : Pour ban un utilisateur définitivement, disponible uniquement pour le Staff !")
         .addField("Commande clearall : ", "S!clearall : Purge tout les messages du channel sur lequel la commande a été utilisé !")
         .addField("Commande clear : ", "Purge 50 messages sur le channel sur lequel la commande a été utilisé !")
