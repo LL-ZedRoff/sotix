@@ -93,7 +93,7 @@ bot.on('ready', () => {
   
 
 bot.on('ready', () => {
-bot.user.setPresence({ game: { name: '[S!help] Sotix Bot !'} });
+bot.user.setPresence({ game: { name: '[S!help] | Sotix Bot !'} });
 console.log("Bot prêt Chef !");
 });
 
@@ -395,6 +395,9 @@ if (command == "kick") { // creates the command kick
         .addField("Commande help : ", "Le prefix du BOT est : S!. S!help : Le BOT affiche ses commandes !")
         .addField("Commande XP : ", "S!xpstat : Le bot vous montre votre nombre de XP !")
         .addField("Commande kick : ", "S!kick [user] {reason} : Pour kick un utilisateur, disponible uniquement pour le Staff du serveur !")
+        .addField("Commande newstory et tellstory :", "S!newstory et S!tellstory sont actuellement en dév !")
+        .addField("Commande Sondage :", "S!Sondage {Nom du sondage}")
+        .addField("
         .addField("Commande Ban : ", "S!ban [user] {reason} : Pour ban un utilisateur définitivement, disponible uniquement pour le Staff !")
         .addField("Commande clearall : ", "S!clearall : Purge tout les messages du channel sur lequel la commande a été utilisé !")
         .addField("Commande clear : ", "Purge 50 messages sur le channel sur lequel la commande a été utilisé !")
