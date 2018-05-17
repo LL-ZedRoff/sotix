@@ -16,13 +16,10 @@ const ytdl = require('ytdl-core');
 db.defaults({ histoires: [], xp: []}).write()
 
 var bot = new Discord.Client();
-var prefix = ("S!");
+var prefix = ("/");
 var randnum = 0;
-
-
-
-
 var storynumber = db.get('histoires').map('story_value').value();
+
 bot.on('guildMemberAdd', member => {
 member.createDM().then(channel => {
 return channel.send('Bienvenue sur mon serveur, passe un bon moment en notre compagnie ! Si tu rencontres un bug ou si tu aurais des suggestions hésite pas à nous en faire part dans le channel #suggestions ! Pense à lire le règlement et a nous donner un avis sur le serveur ! Bonne discussion ! https://imgur.com/tOIo7yG ')
@@ -93,7 +90,7 @@ bot.on('ready', () => {
   
 
 bot.on('ready', () => {
-bot.user.setPresence({ game: { name: '[S!help] | Sotix Bot !'} });
+bot.user.setPresence({ game: { name: '[/help] | Sotix Bot !'} });
 console.log("Bot prêt Chef !");
 });
 
@@ -392,25 +389,25 @@ if (command == "kick") { // creates the command kick
         .setColor('#00FFD1')
         .addField("Description du BOT : ", "BOT interractif qui vous réponds selon vos phrases ou vos mots ! BOT multifonction avec des fonctionnalité interressante et des phrases que vous pouvez ajouter via le channel #idées-SotixBot ! Ce BOT est le BOT du serveur coder par LL ZedRoff ! Amusé vous bien avec ce dernier !")
         .setDescription("Ne pas inclure dans la commande les [] ou les {} !")
-        .addField("Commande help : ", "Le prefix du BOT est : S!. S!help : Le BOT affiche ses commandes !")
-        .addField("Commande XP : ", "S!xpstat : Le bot vous montre votre nombre de XP !")
-        .addField("Commande kick : ", "S!kick [user] {reason} : Pour kick un utilisateur, disponible uniquement pour le Staff du serveur !")
-        .addField("Commande newstory et tellstory :", "S!newstory et S!tellstory sont actuellement en dév !")
-        .addField("Commande Sondage :", "S!Sondage {Nom du sondage}")
-        .addField("Commande Ping Server :", "S!pingserver : Temps de latence avec le serveur (Faux ping)")
-        .addField("Commande Ban : ", "S!ban [user] {reason} : Pour ban un utilisateur définitivement, disponible uniquement pour le Staff !")
-        .addField("Commande clearall : ", "S!clearall : Purge tout les messages du channel sur lequel la commande a été utilisé !")
+        .addField("Commande help : ", "Le prefix du BOT est : /. /help : Le BOT affiche ses commandes !")
+        .addField("Commande XP : ", "/xpstat : Le bot vous montre votre nombre de XP !")
+        .addField("Commande kick : ", "/kick [user] {reason} : Pour kick un utilisateur, disponible uniquement pour le Staff du serveur !")
+        .addField("Commande newstory et tellstory :", "/newstory et /tellstory sont actuellement en dév !")
+        .addField("Commande Sondage :", "/Sondage {Nom du sondage}")
+        .addField("Commande Ping Server :", "/pingserver : Temps de latence avec le serveur (Faux ping)")
+        .addField("Commande Ban : ", "/ban [user] {reason} : Pour ban un utilisateur définitivement, disponible uniquement pour le Staff !")
+        .addField("Commande clearall : ", "/clearall : Purge tout les messages du channel sur lequel la commande a été utilisé !")
         .addField("Commande clear : ", "Purge 50 messages sur le channel sur lequel la commande a été utilisé !")
-        .addField("Commande mute :", "S!mute [user] {reason} : Pour rendre muet un utilisateur !")
-        .addField("Commande unmute : ", "Pour démute quelqu'un du serveur !")
-        .addField("Commande Roll : ", "S!roll : Le bot pioche au hasard un chiffre entre 1 et 10 !")
-        .addField("Commande 8ball : ", "S!8ball : Vous posez une question au bot et il vous répond !")
-        .addField("Formulaire Staff : ", "S!modérateur : Commande afin d'avoir le formulaire pour entrer dans le Staff !")
-        .addField("Formulaire Animateur : ", "S!animateur : Formulaire pour être recruté en tant qu'Animateur !")
-        .addField("Commande Informations sur le serveur : ", "S!serverinfo : Commande pour avoir différentes informations sur le serveur !")
-        .addField("Commande Informations sur le bot", "S!botinfo : Le bot vous montre ses informations !")
-        .addField("Commande Informations sur le Staff", "S!Staff : Vous montre le personnel du serveur Discord !")
-        .addField("Interraction", "S!bienvenu, S!ping, S!coucou, S!Bonne nuit, S!Qui es-tu ?, S!bonjour, S!Au revoir !")
+        .addField("Commande mute :", "/mute [user] {reason} : Pour rendre muet un utilisateur !")
+        .addField("Commande unmute : ", "/unmute : Pour démute quelqu'un du serveur !")
+        .addField("Commande Roll : ", "/roll : Le bot pioche au hasard un chiffre entre 1 et 10 !")
+        .addField("Commande 8ball : ", "/8ball : Vous posez une question au bot et il vous répond !")
+        .addField("Formulaire Staff : ", "/modérateur : Commande afin d'avoir le formulaire pour entrer dans le Staff !")
+        .addField("Formulaire Animateur : ", "/animateur : Formulaire pour être recruté en tant qu'Animateur !")
+        .addField("Commande Informations sur le serveur : ", "/serverinfo : Commande pour avoir différentes informations sur le serveur !")
+        .addField("Commande Informations sur le bot", "/botinfo : Le bot vous montre ses informations !")
+        .addField("Commande Informations sur le Staff", "/Staff : Vous montre le personnel du serveur Discord !")
+        .addField("Interraction", "/bienvenu, S!ping, /coucou, /Bonne nuit, /Qui es-tu ?, /bonjour, /Au revoir !")
         .addField("Attention : ", "Toute personne utilisant les commandes de modération en étant pas un membre du Staff se verra automatiquement ban par un membre du Staff ! Nous tennons a rappeller que ces commandes sont uniquement d'accès au Staff et non aux membres du serveur !")
         .setFooter("Amusé vous bien avec ce BOT !");
         message.channel.sendEmbed(help_embed);
