@@ -217,7 +217,7 @@ break;
     break;
     
 case "pingserver":
-message.channel.sendMessage('Temps de latence avec le serveur :`' + `***${message.createdTimestamp - Date.now()}` + `ms***`);
+message.channel.sendMessage('Temps de latence avec le serveur :`' + '`***${message.createdTimestamp - Date.now()}` + `ms***`);
 break;
 
 case "clearall":
@@ -292,21 +292,21 @@ if (!message.channel.permissionsFor(message.member).hasPermission("BAN_MEMBERS")
 
 }
 
-    if (message.content === prefix + "Qui es-tu ?"){
+    if (message.content === prefix + "qui es-tu ?"){
     message.reply("Je suis Sotix Bot, un BOT codée par LL ZedRoff, je suis là pour t'aider ! Fait S!help pour plus d'information !");
     console.log('Commande Qui es-tu ? demandée !');
     }
-    if (message.content === prefix + "Bonne nuit"){
+    if (message.content === prefix + "bonne nuit"){
     message.reply("Bonne Nuit repose toi bien !");
     console.log('Commande Bonne nuit demandée !');
   
 }
-if (message.content === prefix + "Bienvenu"){
+if (message.content === prefix + "bienvenu"){
     message.reply("Bienvenu à toi nouveau membre ! :D Passe un agréable moment en notre compagnie !")
 }
 
     
-    if (message.content === prefix + "Au revoir"){
+    if (message.content === prefix + "au revoir"){
     message.reply("Au revoir et à bientôt !");
     console.log('Commande Au revoir demandée !');
     }
@@ -369,7 +369,7 @@ if (command == "kick") { // creates the command kick
         message.channel.send({embed: xp_embed}); 
         
     }
-    if (message.content === prefix + "Staff"){
+    if (message.content === prefix + "staff"){
         var staff_embed = new Discord.RichEmbed()
         .setColor('00FFD1')
         .setTitle("Tout les membres du Staff du serveur Sotix !")
@@ -426,7 +426,7 @@ if (command == "kick") { // creates the command kick
         .setColor("0x0000FF")
         message.channel.sendEmbed(embed)
     }
-    if (message.content.startsWith(prefix + "Sondage")) {
+    if (message.content.startsWith(prefix + "sondage")) {
         if (message.author.id == "327074335238127616"){    
         let args = message.content.split(" ").slice(1);
         let thingToEcho = args.join(" ")
