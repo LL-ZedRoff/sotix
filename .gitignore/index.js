@@ -217,7 +217,7 @@ break;
     break;
     
 case "pingserver":
-message.channel.sendMessage('Temps de latence avec le serveur :`' + '`***${message.createdTimestamp - Date.now()}` + `ms***`);
+message.channel.sendMessage('Temps de latence avec le serveur :`' + `***${message.createdTimestamp - Date.now()}` + `ms***`);
 break;
 
 case "clearall":
