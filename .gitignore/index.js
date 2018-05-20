@@ -387,8 +387,7 @@ if (command == "kick") { // creates the command kick
         if (message.content === prefix + "help"){
         var help_embed = new Discord.RichEmbed()
         .setColor('#00FFD1')
-        .addField("Description du BOT : ", "BOT interractif qui vous réponds selon vos phrases ou vos mots ! BOT multifonction avec des fonctionnalité interressante et des phrases que vous pouvez ajouter via le channel #idées-SotixBot ! Ce BOT est le BOT du serveur coder par LL ZedRoff ! Amusé vous bien avec ce dernier !")
-        .setDescription("Ne pas inclure dans la commande les [] ou les {} !")
+        .addField("Description du BOT : ", "```ℹ | Salut je suis un bot interactif de type qualitatif. Je suis multifonction, je possède de nombreuses fonctionnalités intéressantes, par ailleurs vous pouvez m'apporter vos idées dans le channel #idées-SotixBot !```")
         .addField("Commande help : ", "Le prefix du BOT est : /. /help : Le BOT affiche ses commandes !")
         .addField("Commande XP : ", "/xpstat : Le bot vous montre votre nombre de XP !")
         .addField("Commande kick : ", "/kick [user] {reason} : Pour kick un utilisateur, disponible uniquement pour le Staff du serveur !")
