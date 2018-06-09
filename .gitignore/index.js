@@ -94,7 +94,7 @@ bot.user.setPresence({ game: { name: '[/help] | Sotix Bot !'} });
 console.log("Bot prêt Chef !");
 });
 
-bot.login(process.env.TOKEN);
+
 
 bot.on('message', message => {
 
